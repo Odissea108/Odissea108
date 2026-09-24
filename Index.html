@@ -21,15 +21,17 @@
                 <span class="text-xs bg-blue-800 text-blue-200 px-2 py-0.5 rounded-full group-hover:bg-blue-700 transition">What is this? ℹ️</span>
             </button>
 
-            <h1 class="text-4xl md:text-6xl font-extrabold text-white mt-4 tracking-tight">Odissea108</h1>
-            <p class="text-xl text-slate-400 mt-4 leading-relaxed">
-                Kickstart your journey to excellence and discover how AI, automation, Lean thinking, and organizational best practices can transform your business.
-            </p>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mt-4 tracking-tight">
+                Odissea108 
+                <span class="block italic font-normal text-slate-300 text-2xl md:text-3xl mt-2">
+                    A transformational journey to excellence in Supply Chain Management
+                </span>
+            </h1>
         </div>
 
         <!-- Fashion & Logistics Hero Banner -->
         <div class="max-w-5xl mt-16">
-            <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">The Journey to Excellence</h2>
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">The road to the Future</h2>
             <p class="text-slate-400 mb-8">From check up to autonomous operations — driving operational efficiency through modern technology.</p>
 
             <div class="relative rounded-2xl overflow-hidden border border-slate-800/80 shadow-2xl group">
@@ -68,14 +70,16 @@
 
             <!-- Call to Action Buttons -->
             <div class="mt-8 flex flex-wrap gap-4">
-                <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-xl shadow-lg shadow-blue-600/30 transition duration-200">Book a Free Check Up</a>
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-xl shadow-lg shadow-blue-600/30 transition duration-200">Book a Free Assessment</a>
+                <button onclick="toggleAssessmentModal()" class="bg-slate-900 hover:bg-slate-800 text-slate-200 font-medium px-6 py-3 rounded-xl border border-slate-700/80 transition duration-200 cursor-pointer flex items-center gap-2">
+                    <span>Assessment</span> ℹ️
+                </button>
                 <a href="#services" class="bg-slate-900 hover:bg-slate-800 text-slate-200 font-medium px-6 py-3 rounded-xl border border-slate-700/80 transition duration-200">Explore Services</a>
-                <button onclick="toggleWhoWeAreModal()" class="bg-slate-900 hover:bg-slate-800 text-slate-200 font-medium px-6 py-3 rounded-xl border border-slate-700/80 transition duration-200 cursor-pointer">Who we are</button>
             </div>
         </div>
     </header>
 
-    <!-- Why Odissea 08 Was Born Section -->
+    <!-- Why Odissea 108 Was Born Section -->
     <section class="max-w-6xl mx-auto px-6 py-16 border-b border-slate-800/80">
         <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Why Odissea108 Was Born</h2>
         <p class="text-slate-400 max-w-3xl italic">
@@ -159,7 +163,8 @@
         <div class="max-w-2xl mx-auto">
             <h2 class="text-3xl font-bold text-white">Optimize Your Logistics Operations</h2>
             <p class="text-slate-400 mt-3">Ready to take the next step in your transformation and make competitiveness your primary driver? Let's connect.</p>
-            <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+            <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
+                <button onclick="toggleWhoWeAreModal()" class="bg-slate-900 hover:bg-slate-800 text-slate-200 font-medium px-8 py-3 rounded-xl border border-slate-700/80 transition duration-200 cursor-pointer">Who we are</button>
                 <button onclick="toggleContactModal()" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-3 rounded-xl shadow-lg shadow-blue-600/30 transition duration-200 cursor-pointer">Contact</button>
             </div>
             <p class="text-xs text-slate-500 mt-6">Flower Mound, TX • Open to remote advisory & selective regional engagements</p>
@@ -212,6 +217,105 @@
                     Submit
                 </button>
             </form>
+        </div>
+    </div>
+
+    <!-- Modal Layout for Assessment Details -->
+    <div id="assessmentModal" onclick="handleAssessmentBackdropClick(event)" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md hidden flex items-center justify-center p-4 z-50">
+        <div class="bg-slate-900 border border-slate-800/90 rounded-3xl max-w-2xl w-full p-6 md:p-10 shadow-2xl relative overflow-hidden max-h-[90vh] overflow-y-auto">
+            
+            <!-- Background Glow Effects -->
+            <div class="absolute -top-16 -right-16 w-40 h-40 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-16 -left-16 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <!-- Close Button -->
+            <button onclick="toggleAssessmentModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white text-xl font-bold p-2 transition rounded-full hover:bg-slate-800/50 w-10 h-10 flex items-center justify-center">✕</button>
+
+            <!-- Header Badge & Title -->
+            <span class="text-blue-400 font-semibold text-xs uppercase tracking-widest bg-blue-950/60 px-3 py-1 rounded-full border border-blue-800/40 inline-block">Methodology</span>
+            <h3 class="text-2xl md:text-3xl font-extrabold text-white mt-3 mb-6 tracking-tight">Logistics Assessment</h3>
+
+            <!-- Body Content -->
+            <div class="space-y-6 text-slate-300 text-sm md:text-base leading-relaxed">
+                
+                <!-- Section 1 -->
+                <div class="bg-slate-950/60 p-5 rounded-2xl border border-slate-800/80 backdrop-blur-sm">
+                    <h4 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                        <span class="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs">1</span>
+                        What is a Logistics Assessment?
+                    </h4>
+                    <ul class="space-y-2 mt-3 list-disc list-inside text-slate-300">
+                        <li>It is a structured, in-depth evaluation of supply chain planning and warehouse processes.</li>
+                        <li>Rather than relying solely on high-level administrative reports, an audit analyzes physical movements, information flows, and actual shop-floor execution.</li>
+                        <li>Its primary goal is to map performance against KPIs to quantify the economic impact of operational bottlenecks.</li>
+                    </ul>
+                </div>
+
+                <!-- Section 2 -->
+                <div class="bg-slate-950/60 p-5 rounded-2xl border border-slate-800/80 backdrop-blur-sm">
+                    <h4 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                        <span class="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs">2</span>
+                        Identifying Hidden Waste and Costs
+                    </h4>
+                    <ul class="space-y-3 mt-3">
+                        <li class="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                            <strong class="text-blue-400 block mb-1">Warehouse & Handling</strong>
+                            Outlines how poor layouts, disorganized picking routes, or inadequate stock management increase labor costs and extend cycle times.
+                        </li>
+                        <li class="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                            <strong class="text-blue-400 block mb-1">Transport & Delivery</strong>
+                            Examines extra charges, failed delivery attempts, transit bottlenecks, and customer complaints that inflate overall logistics spend.
+                        </li>
+                        <li class="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                            <strong class="text-blue-400 block mb-1">Information Systems (ERP/WMS)</strong>
+                            Highlights the gap between software data and reality—data may be correct on paper, yet fail to highlight underlying operational delays.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Section 3 -->
+                <div class="bg-blue-950/30 p-5 rounded-2xl border border-blue-900/40 backdrop-blur-sm">
+                    <h4 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                        <span class="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs">3</span>
+                        Benefits
+                    </h4>
+                    <ul class="space-y-3 mt-3">
+                        <li><strong class="text-blue-400">Cost Reduction:</strong> Eliminates non-value-added activities and hidden operational leaks.</li>
+                        <li><strong class="text-blue-400">Improved Service Quality:</strong> Reduces delays, errors, and delivery failures, boosting overall customer satisfaction.</li>
+                        <li><strong class="text-blue-400">Data-Driven Decision Making:</strong> Translates operational flaws directly into financial metrics to help management prioritize corrective actions.</li>
+                    </ul>
+                </div>
+
+                <!-- Highlighted Key Deliverables Box -->
+                <div class="bg-gradient-to-r from-blue-950/80 to-slate-900 p-5 rounded-2xl border border-blue-500/50 shadow-lg shadow-blue-950/50 backdrop-blur-sm">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="flex items-start gap-3">
+                            <span class="text-xl">⏱️</span>
+                            <div>
+                                <span class="text-xs uppercase tracking-wider text-blue-400 font-bold block">Duration</span>
+                                <span class="text-white font-semibold text-base">3 - 5 Days</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-xl">📋</span>
+                            <div>
+                                <span class="text-xs uppercase tracking-wider text-blue-400 font-bold block">Outcome Deliverable</span>
+                                <span class="text-slate-200 text-sm leading-snug block">
+                                    Containment plan to apply immediately and a roadmap to the Future.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Action Footer -->
+            <div class="mt-8 flex justify-end">
+                <button onclick="toggleAssessmentModal()" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-2.5 rounded-xl text-sm transition duration-200 shadow-lg shadow-blue-600/30">
+                    Close
+                </button>
+            </div>
         </div>
     </div>
 
@@ -337,6 +441,17 @@
         function handleWhoWeAreBackdropClick(event) {
             if (event.target === document.getElementById('whoWeAreModal')) {
                 toggleWhoWeAreModal();
+            }
+        }
+
+        function toggleAssessmentModal() {
+            const modal = document.getElementById('assessmentModal');
+            modal.classList.toggle('hidden');
+        }
+
+        function handleAssessmentBackdropClick(event) {
+            if (event.target === document.getElementById('assessmentModal')) {
+                toggleAssessmentModal();
             }
         }
     </script>
