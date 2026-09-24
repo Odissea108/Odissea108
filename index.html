@@ -69,7 +69,10 @@
             </div>
 
             <!-- Call to Action Buttons -->
-            <div class="mt-8 flex flex-wrap gap-4">
+            <div class="mt-8 flex flex-wrap gap-4 items-center">
+                <button onclick="toggleIndustriesModal()" class="bg-slate-900 hover:bg-slate-800 text-slate-200 font-medium px-6 py-3 rounded-xl border border-slate-700/80 transition duration-200 cursor-pointer flex items-center gap-2">
+                    <span>Industries</span> ℹ️
+                </button>
                 <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-xl shadow-lg shadow-blue-600/30 transition duration-200">Book a Free Assessment</a>
                 <button onclick="toggleAssessmentModal()" class="bg-slate-900 hover:bg-slate-800 text-slate-200 font-medium px-6 py-3 rounded-xl border border-slate-700/80 transition duration-200 cursor-pointer flex items-center gap-2">
                     <span>Assessment</span> ℹ️
@@ -217,6 +220,58 @@
                     Submit
                 </button>
             </form>
+        </div>
+    </div>
+
+    <!-- Modal Layout for Target Industries -->
+    <div id="industriesModal" onclick="handleIndustriesBackdropClick(event)" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md hidden flex items-center justify-center p-4 z-50">
+        <div class="bg-slate-900 border border-slate-800/90 rounded-3xl max-w-2xl w-full p-6 md:p-10 shadow-2xl relative overflow-hidden">
+            
+            <!-- Background Glow Effects -->
+            <div class="absolute -top-16 -right-16 w-40 h-40 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-16 -left-16 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <!-- Close Button -->
+            <button onclick="toggleIndustriesModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white text-xl font-bold p-2 transition rounded-full hover:bg-slate-800/50 w-10 h-10 flex items-center justify-center">✕</button>
+
+            <!-- Header Badge & Title -->
+            <span class="text-blue-400 font-semibold text-xs uppercase tracking-widest bg-blue-950/60 px-3 py-1 rounded-full border border-blue-800/40 inline-block">Who We Serve</span>
+            <h3 class="text-2xl md:text-3xl font-extrabold text-white mt-3 mb-6 tracking-tight">Industries & Operations</h3>
+
+            <!-- Body Content -->
+            <div class="space-y-3">
+                <p class="text-slate-400 text-sm mb-4">We deliver operational excellence and technological transformation tailored specifically to the unique challenges of:</p>
+                
+                <div class="grid sm:grid-cols-2 gap-3">
+                    <div class="bg-slate-950/60 p-4 rounded-xl border border-slate-800 flex items-center gap-3">
+                        <span class="text-2xl">🏬</span>
+                        <span class="text-slate-200 font-semibold text-sm">Distribution Centers</span>
+                    </div>
+                    <div class="bg-slate-950/60 p-4 rounded-xl border border-slate-800 flex items-center gap-3">
+                        <span class="text-2xl">🌐</span>
+                        <span class="text-slate-200 font-semibold text-sm">Logistics Networks</span>
+                    </div>
+                    <div class="bg-slate-950/60 p-4 rounded-xl border border-slate-800 flex items-center gap-3">
+                        <span class="text-2xl">🏭</span>
+                        <span class="text-slate-200 font-semibold text-sm">Warehouses</span>
+                    </div>
+                    <div class="bg-slate-950/60 p-4 rounded-xl border border-slate-800 flex items-center gap-3">
+                        <span class="text-2xl">🛒</span>
+                        <span class="text-slate-200 font-semibold text-sm">E-commerce Platforms</span>
+                    </div>
+                    <div class="bg-slate-950/60 p-4 rounded-xl border border-slate-800 flex items-center gap-3 sm:col-span-2">
+                        <span class="text-2xl">🚛</span>
+                        <span class="text-slate-200 font-semibold text-sm">Third-Party Logistics (3PL)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Footer -->
+            <div class="mt-8 flex justify-end">
+                <button onclick="toggleIndustriesModal()" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-2.5 rounded-xl text-sm transition duration-200 shadow-lg shadow-blue-600/30">
+                    Close
+                </button>
+            </div>
         </div>
     </div>
 
@@ -452,6 +507,17 @@
         function handleAssessmentBackdropClick(event) {
             if (event.target === document.getElementById('assessmentModal')) {
                 toggleAssessmentModal();
+            }
+        }
+
+        function toggleIndustriesModal() {
+            const modal = document.getElementById('industriesModal');
+            modal.classList.toggle('hidden');
+        }
+
+        function handleIndustriesBackdropClick(event) {
+            if (event.target === document.getElementById('industriesModal')) {
+                toggleIndustriesModal();
             }
         }
     </script>
